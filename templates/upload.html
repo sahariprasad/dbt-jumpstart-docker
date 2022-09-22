@@ -2,14 +2,15 @@
    <title>
       dbt Jumpstart
    </title>
-   <header>
+   <header style="text-align: center;">
       <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
       <h1>dbt Jumpstart</h1>
+      <br>
    </header>
    <body class="mono-fonts">
       <div class="content">
-         <!-- <form action = "http://34.74.175.203:9000/uploader" method = "POST" enctype = "multipart/form-data"> -->
-         <form action = "http://localhost:9000/uploader" method = "POST" enctype = "multipart/form-data">
+         <form action = "http://34.74.175.203:9000/uploader" method = "POST" enctype = "multipart/form-data">
+         <!-- <form action = "http://localhost:9000/uploader" method = "POST" enctype = "multipart/form-data"> -->
             <label for="columns"><b>Choose columns file</b></label>
             <input type = "file" id = "columns" name = "file" /><br><br>
             <label for="tables"><b>Choose tables file</b></label>
@@ -17,6 +18,7 @@
             <input type = "submit" value = "Upload and Convert"/>
          </form>
          <hr>
+         <h2>Very short intro</h2>
          <p>
             This project helps jump start any dbt project. You can simply collect all the information regarding your tables and their schema and upload here, and the service generates the dbt models for you. The following instructions will guide you through the process.
          </p>
@@ -44,7 +46,7 @@
             Upload your columns.xlsx and tables.xlsx files and hit the "Upload and Convert" button.
          </p>
          <hr>
-         <p class="center-text">You have saved some time in your life now, do amazing things with it.</p>
+         <p class="cat-text">"You have saved some time in your life now, do amazing things with it"<br> - Meow, the Thunder Cat.</p>
          <img src="{{ url_for('static', filename='images/thunder-cat.jpg') }}" class="cat-image">
       </div>
       
