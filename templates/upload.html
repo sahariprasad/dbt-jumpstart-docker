@@ -18,11 +18,24 @@
          <br>
          <form action = "http://34.74.175.203:9000/uploader" method = "POST" enctype = "multipart/form-data">
          <!-- <form action = "http://localhost:9000/uploader" method = "POST" enctype = "multipart/form-data"> -->
-            <label for="columns"><b>Choose columns file</b></label>
+            <!-- <label for="columns"><b>Choose columns file</b></label>
             <input type = "file" id = "columns" name = "file" /><br><br>
             <label for="tables"><b>Choose tables file</b></label>
-            <input type = "file" id = "tables" name = "file" /><br><br>
-            <input type = "submit" value = "Upload and Convert" class="button-54"/>
+            <input type = "file" id = "tables" name = "file" /><br><br> -->
+            
+            <!-- <label for="file" class="button-85">
+               Custom Upload
+           </label>
+           <input id="file" type="file"/> -->
+            <div id="select-files-bar">
+               <label for="columns" class="button_slide slide_right">Select columns.xlsx</label>
+               <input type="file" id="columns" name="file">
+               <label for="tables" class="button_slide slide_right">Select tables.xlsx</label>
+               <input type="file" id="tables" name="file">
+               <button type="submit" value = "Upload and Convert" class="button_slide slide_right">Upload and Convert</button>
+            </div>
+           
+            <!-- <input type = "submit" value = "Upload and Convert" class="button-85"/> -->
          </form>
          <hr>
          <h2>Very short intro</h2>
