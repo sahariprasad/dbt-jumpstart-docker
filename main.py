@@ -5,8 +5,8 @@ import os
 import shutil
 
 
-input_file_path = ".\\config"
-output_file_path = ".\\output"
+input_file_path = "./dbt_jumpstart/config"
+output_file_path = "./dbt_jumpstart/output"
 
 # function for adding a line
 def add_line(str1, str2):
@@ -21,10 +21,10 @@ def add_line_with_comma(str1, str2):
 def make_models(input_file_path, output_file_path):
     model_output_path = output_file_path
 
-    tables_file = pd.ExcelFile(input_file_path + "\\tables.xlsx")
+    tables_file = pd.ExcelFile(input_file_path + "/tables.xlsx")
     tables_dfs = {sheet_name: tables_file.parse(sheet_name) for sheet_name in tables_file.sheet_names}
 
-    columns_file = pd.ExcelFile(input_file_path + "\\columns.xlsx")
+    columns_file = pd.ExcelFile(input_file_path + "/columns.xlsx")
     columns_dfs = {sheet_name: columns_file.parse(sheet_name) for sheet_name in columns_file.sheet_names}
 
     # convert the dataframes in the columns_dfs to dicts and create a new larger dict containing everything
@@ -83,7 +83,7 @@ def make_models(input_file_path, output_file_path):
         else:
             model_str = add_line(model_str, "from {{ ref('" + main_dict[table]["source"] + "') }}")
 
-        output_file = open(model_output_path + "\\" + table + ".sql", "w", encoding="utf-8")
+        output_file = open(model_output_path + "/" + table + ".sql", "w", encoding="utf-8")
         output_file.write(config_str + model_str)
         output_file.close()
 
@@ -96,7 +96,7 @@ def make_models(input_file_path, output_file_path):
             schema_str = add_line(schema_str, tab8 + "  name: " + column["name"])
             schema_str = add_line(schema_str, tab8 + "  description: \"" + column["description"] + "\"")
         schema_str = add_line(schema_str, "")
-    output_file = open(model_output_path + "\\schema.yml", "w", encoding="utf-8")
+    output_file = open(model_output_path + "/schema.yml", "w", encoding="utf-8")
     output_file.write(schema_str)
     output_file.close()
 
@@ -126,13 +126,12 @@ def upload_file_uploader():
     if request.method == 'POST':
         files = request.files.getlist("file")
         for file in files:
-            file.save(".\\config\\{}".format(file.filename))
-        
+            file.save("./dbt_jumpstart/config/{}".format(file.filename))
         make_models(input_file_path, output_file_path)
-        shutil.make_archive("delivery\\output", 'zip', r"C:\Code repositories\dbt-jumpstart-docker\output")
-        return send_from_directory(".\\delivery", "output.zip")
+        shutil.make_archive("./dbt_jumpstart/delivery/output", 'zip', r"./dbt_jumpstart/output")
+        return send_from_directory("/usr/src/app/dbt_jumpstart/delivery", "output.zip")
     return 'file uploaded successfully'
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port = 5000)
+    app.run(host='0.0.0.0', port = 9000)
