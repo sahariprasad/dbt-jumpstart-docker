@@ -1,9 +1,18 @@
 <html>
+   <title>
+      dbt Jumpstart
+   </title>
+   <header>
+      <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">dbt Jumpstart</h1>
+   </header>
    <body>
       <form action = "http://localhost:5000/uploader" method = "POST" 
          enctype = "multipart/form-data">
-         <input type = "file" name = "file" />
-         <input type = "submit"/>
+         <label for="columns" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Choose columns file</label><br>
+         <input type = "file" id = "columns" name = "file" /><br><br>
+         <label for="tables" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Choose tables file</label><br>
+         <input type = "file" id = "tables" name = "file" /><br><br>
+         <input type = "submit" value = "Upload and Convert"/>
       </form>
    </body>
 </html>

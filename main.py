@@ -100,8 +100,6 @@ def make_models(input_file_path, output_file_path):
     output_file.write(schema_str)
     output_file.close()
 
-# make_models(input_file_path, output_file_path)
-
 # Set flask app name
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = 'config'
@@ -125,10 +123,15 @@ def upload_file():
 	
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file_uploader():
-   if request.method == 'POST':
-      f = request.files['file']
-      f.save(".\\config\\{}".format(f.filename))
-      return 'file uploaded successfully'
+    if request.method == 'POST':
+        files = request.files.getlist("file")
+        for file in files:
+            file.save(".\\config\\{}".format(file.filename))
+        
+        make_models(input_file_path, output_file_path)
+        shutil.make_archive("delivery\\output", 'zip', r"C:\Code repositories\dbt-jumpstart-docker\output")
+        return send_from_directory(".\\delivery", "output.zip")
+    return 'file uploaded successfully'
 
 
 if __name__ == '__main__':
