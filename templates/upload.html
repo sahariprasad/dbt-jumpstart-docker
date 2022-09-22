@@ -3,13 +3,13 @@
       dbt Jumpstart
    </title>
    <header>
-      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
       <h1>dbt Jumpstart</h1>
    </header>
-   <body style="font-family: monospace;">
+   <body class="">
       <div class="content">
-         <form action = "http://34.74.175.203:9000/uploader" method = "POST" enctype = "multipart/form-data">
-         <!-- <form action = "http://localhost:9000/uploader" method = "POST" enctype = "multipart/form-data"> -->
+         <!-- <form action = "http://34.74.175.203:9000/uploader" method = "POST" enctype = "multipart/form-data"> -->
+         <form action = "http://localhost:9000/uploader" method = "POST" enctype = "multipart/form-data">
             <label for="columns"><b>Choose columns file</b></label>
             <input type = "file" id = "columns" name = "file" /><br><br>
             <label for="tables"><b>Choose tables file</b></label>
@@ -32,16 +32,20 @@
          <p>
             Create tables.xlsx with the following format. You definitely need to have the column headers as is, but you are free to leave them empty.
          </p>
-         <img src="../images/tables.png">
+         <img src="{{ url_for('static', filename='images/tables.png') }}">
          <h3>columns.xlsx</h3>
          <p>
             Create a .xlsx spreadsheet in the below format. You definitely need to have the column headers as is, but you are free to leave them empty. <br><br>
             <b>Note that you need to name the sheets with the exact table names that you used in the tables.xlsx</b>
          </p>
-         <img src="../images/columns.png">
+         <img src="{{ url_for('static', filename='images/columns.png') }}">
+         <h3>Upload and Convert</h3>
+         <p>
+            Upload your columns.xlsx and tables.xlsx files and hit the "Upload and Convert" button.
+         </p>
          <hr>
          <p class="center-text">You have saved some time in your life now, do amazing things with it.</p>
-         <img src="../images/thunder-cat.jpg" class="cat-image">
+         <img src="{{ url_for('static', filename='images/thunder-cat.jpg') }}" class="cat-image">
       </div>
       
       

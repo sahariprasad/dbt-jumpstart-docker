@@ -20,3 +20,7 @@ img {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.mono-fonts {
+    font-family: monospace;
+}
