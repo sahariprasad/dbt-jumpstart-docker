@@ -130,7 +130,7 @@ def upload_file_uploader():
         make_models(input_file_path, output_file_path)
         shutil.make_archive("./dbt_jumpstart/delivery/output", 'zip', r"./dbt_jumpstart/output")
         return send_from_directory("/usr/src/app/dbt_jumpstart/delivery", "output.zip")
-    return 'file uploaded successfully'
+    return 'Nothing has happened. Go back.'
 
 
 if __name__ == '__main__':
