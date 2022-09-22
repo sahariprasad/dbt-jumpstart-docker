@@ -1,0 +1,105 @@
+ 
+    version: 2 
+    
+    models:
+    - name: table1
+      description: "This is table 1"
+      columns:
+        -
+          name: col1
+          description: "This is col1"
+        -
+          name: col2
+          description: "This is col2"
+        -
+          name: col3
+          description: "This is col3"
+        -
+          name: col4
+          description: "This is col4"
+        -
+          name: col5
+          description: "This is col5"
+        -
+          name: col6
+          description: "This is col6"
+        -
+          name: col7
+          description: "This is col7"
+        -
+          name: col8
+          description: "This is col8"
+        -
+          name: col9
+          description: "This is col9"
+        -
+          name: col10
+          description: "This is col10"
+
+    - name: table2
+      description: "This is table 2"
+      columns:
+        -
+          name: col1
+          description: "This is col1"
+        -
+          name: col2
+          description: "This is col2"
+        -
+          name: col3
+          description: "This is col3"
+        -
+          name: col4
+          description: "This is col4"
+        -
+          name: col5
+          description: "This is col5"
+        -
+          name: col6
+          description: "This is col6"
+        -
+          name: col7
+          description: "This is col7"
+        -
+          name: col8
+          description: "This is col8"
+        -
+          name: col9
+          description: "This is col9"
+        -
+          name: col10
+          description: "This is col10"
+
+    - name: table3
+      description: "This is table 3"
+      columns:
+        -
+          name: col1
+          description: "This is col1"
+        -
+          name: col2
+          description: "This is col2"
+        -
+          name: col3
+          description: "This is col3"
+        -
+          name: col4
+          description: "This is col4"
+        -
+          name: col5
+          description: "This is col5"
+        -
+          name: col6
+          description: "This is col6"
+        -
+          name: col7
+          description: "This is col7"
+        -
+          name: col8
+          description: "This is col8"
+        -
+          name: col9
+          description: "This is col9"
+        -
+          name: col10
+          description: "This is col10"
