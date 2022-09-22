@@ -118,9 +118,9 @@ def download():
     return send_from_directory(".\\delivery", "output.zip")
 
 
-@app.route('/upload')
+@app.route('/jumpstart')
 def upload_file():
-   return render_template('upload.html')
+   return render_template('jumpstart.html')
 	
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file_uploader():

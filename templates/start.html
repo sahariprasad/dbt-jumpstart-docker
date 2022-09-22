@@ -3,9 +3,20 @@
         Hello there!
     </title>
     <header>
-        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Hello there!</h1>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
     </header>
-    <form action="http://localhost:9000/upload">
-        <input type="submit" value="dbt Jumpstart" />
-    </form>
+    <body>
+        <div class="start-container">
+            <div class="header-black-white">
+                <div class="title-text-left">Hello there!</div>
+            </div>
+            <div>
+                <form action="http://localhost:9000/jumpstart">
+                    <!-- <input type="submit" value="dbt Jumpstart" /> -->
+                        <button type="submit" value = "dbt Jumpstart" class="button_slide slide_right">dbt Jumpstart</button>
+                </form>
+            </div>          
+        </div>     
+    </body>
+    
 </html>
