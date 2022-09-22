@@ -107,7 +107,8 @@ app.config["UPLOAD_FOLDER"] = 'config'
 # Default hello world output
 @app.route('/')
 def hello_world():
-    return "Hello there!"
+    # return "Hello there!"
+    return render_template('start.html')
 
 
 @app.route('/download', methods=['GET', 'POST'])
