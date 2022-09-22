@@ -129,6 +129,19 @@ def upload_file_uploader():
             file.save("./dbt_jumpstart/config/{}".format(file.filename))
         make_models(input_file_path, output_file_path)
         shutil.make_archive("./dbt_jumpstart/delivery/output", 'zip', r"./dbt_jumpstart/output")
+
+        # delete the generated files except the output
+        folders_to_clear = ['./dbt_jumpstart/config', './dbt_jumpstart/output']
+        for folder in folders_to_clear:
+            for filename in os.listdir(folder):
+                file_path = os.path.join(folder, filename)
+                try:
+                    if os.path.isfile(file_path) or os.path.islink(file_path):
+                        os.unlink(file_path)
+                    elif os.path.isdir(file_path):
+                        shutil.rmtree(file_path)
+                except Exception as e:
+                    print('Failed to delete %s. Reason: %s' % (file_path, e))
         return send_from_directory("/usr/src/app/dbt_jumpstart/delivery", "output.zip")
     return 'Nothing has happened. Go back.'
 
