@@ -10,7 +10,7 @@ services:
       - discovery.type=single-node
     networks:
       dbt_jumpstart_net:
-        ipv4_address: 172.20.0.4
+        ipv4_address: 10.20.0.4
     ports:
       - 9000:9000
 
@@ -19,5 +19,5 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.20.0.0/16
-          gateway: 172.20.0.1
+        - subnet: 10.20.0.0/16
+          gateway: 10.20.0.1
