@@ -3,7 +3,8 @@ import openpyxl
 from flask import Flask, redirect, url_for, request, render_template, send_from_directory
 import os
 import shutil
-import dbtjumpstart
+from dbtjumpstart.main import make_models
+
 
 input_file_path = "./dbt_jumpstart/config"
 output_file_path = "./dbt_jumpstart/output"
@@ -36,7 +37,7 @@ def upload_file_uploader():
         files = request.files.getlist("file")
         for file in files:
             file.save("./dbt_jumpstart/config/{}".format(file.filename))
-        dbtjumpstart.make_models(input_file_path, output_file_path)
+        make_models(input_file_path, output_file_path)
         shutil.make_archive("./dbt_jumpstart/delivery/output", 'zip', r"./dbt_jumpstart/output")
 
         # delete the generated files except the output
