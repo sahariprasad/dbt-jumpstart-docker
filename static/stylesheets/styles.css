@@ -28,6 +28,8 @@ img {
     font-family: 'Space Mono', monospace;
 }
 
+
+
 .header{
     z-index: 999;
     text-align: center;
@@ -51,7 +53,7 @@ img {
   left: 0px;
   width: 100%;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(255, 255, 255, 0.6); */
   backdrop-filter: blur(5px);
   /* box-shadow: rgba(240, 172, 46, 0.09) 0px 2px 1px, rgba(240, 172, 46, 0.09) 0px 4px 2px, rgba(240, 172, 46, 0.09) 0px 8px 4px, rgba(240, 172, 46, 0.09) 0px 16px 8px, rgba(240, 172, 46, 0.09) 0px 32px 16px; */
 }
@@ -67,17 +69,7 @@ img {
   font-weight: 900;
 }
 
-.title-text-left {
-  margin: 16px;
-  font-family: "Space Mono", monospace;
-  font-size: x-large;
-  color: rgb(57, 55, 55) !important;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  height: 60px;
-  font-weight: 900;
-}
+
 
 
 input[type="file"] {
@@ -118,10 +110,84 @@ input[type="file"] {
     align-items: center;
 } */
 
+.body-background {
+    background-color: white;
+    /* background-image: url("{{ url_for('static', filename='images/start_bg.webp') }}"); */
+}
+
+.title-text-left {
+    margin: 16px;
+    font-family: "Space Mono", monospace;
+    font-size: x-large;
+    /* color: rgb(255, 255, 255) !important; */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    height: 60px;
+    font-weight: 900;
+}
+
+
 .start-container * {
     position: relative;
-    align-items: stretch;
+    display: block;
+    /* flex-direction: column; */
+    /* align-items: stretch; */
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
+.intro-block {
+    float: left;
+    display: block;
+    width: 60%;
+    padding: 12px;
+    background-color: white;
+    /* height: 80%; */
+    /* overflow-y: auto; */
+    padding-top: 12px;
+}
+
+.intro-text {
+    font-family: 'Space Mono', monospace;
+    padding: 8px;
+    color: black;
+}
+
+.site-container {
+    display: block;
+    float: left;
+    width: 40%;
+    /* padding-top: 8px; */
+}
+
+.site-card {
+    /* margin: 12px; */
+    /* padding: 4px; */
+    margin-bottom: 16px;
+    padding-top: 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.site-card-text {
+    font-family: 'Space Mono', monospace;
+    padding: 16px;
+    padding-top: 4px;
+    color: white;
+    background-color: #00ABA9;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .intro-block, .site-container {
+      width: 100%;
+    }
+  }
 
 #select-files-bar {
 	padding: 5px;
@@ -144,3 +210,4 @@ input[type="file"] {
 .form-zero-margin {
     margin: 0px !important;
 }
+
