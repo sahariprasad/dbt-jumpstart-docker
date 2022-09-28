@@ -1,20 +1,80 @@
 <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
     <title>
         Hello there!
     </title>
     <header>
         <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
     </header>
-    <body>
+    <body class="body-background">
         <div class="start-container">
             <div class="header-black-white">
                 <div class="title-text-left">Hello there!</div>
             </div>
-            <div>
-                <form action="http://sahariprasad.com/jumpstart">
-                    <!-- <input type="submit" value="dbt Jumpstart" /> -->
-                        <button type="submit" value = "dbt Jumpstart" class="button_slide slide_right">dbt Jumpstart</button>
-                </form>
+            <div style="padding-left: 24px; padding-right: 24px;">
+                <div class="intro-block">
+                    <div class="intro-text">
+                        I'm Hari. I'm a Senior Data Specialist, specializing in data warehousing in Snowflake and data modelling with dbt with seasoned experience in Azure services, particularly in Azure Data Factory, Azure Functions, Azure Databricks, Azure Blob Storage, Azure Logic Apps.<br><br>
+                        SQL Server, HANA and SAP BW are some other warehouses I am experienced in. ETL experience with HVR, Fivetran and BODS.<br><br>
+                        I am hyped about automating things in life leveraging my ability to be the right-amount-of-lazy. Smart homes, python accelerators for every mundane task - like choosing what to eat, setting alarms, controlling temperature and lights, I use Python and shell scripts to control all accelerators and Docker is my new found love. <br><br>
+                        <div class="contact-container">
+                            <div class="contact-card" onclick="window.open('https://www.linkedin.com/in/sahariprasad/','LinkedIn profile');">
+                                <div class="contact-card-text">
+                                    LinkedIn
+                                </div>
+                            </div>
+                            <div class="contact-card" onclick="window.open('https://github.com/sahariprasad','GitHub profile');">
+                                <div class="contact-card-text">
+                                    GitHub
+                                </div>
+                            </div>
+                            <div class="contact-card" onclick="window.open('mailto:sahariprasad@outlook.com','Email');">
+                                <div class="contact-card-text">
+                                    Email
+                                </div>
+                            </div>
+                            <div class="contact-card" onclick="window.open('tel:+918220884274','Phone');">
+                                <div class="contact-card-text">
+                                    Phone
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="site-container">
+                    <div class="site-container-title">
+                        Here are some of the many little things that I am putting together.
+                    </div>
+                    <div class="site-card">
+                        <div class="site-card-text" onclick= "window.open('http://sahariprasad.com/jumpstart','dbt Jumpstart service');" style="cursor: pointer;">
+                            <h3>dbt Jumpstart (Service)</h3>
+                            This project helps quickly create boilerplate dbt models from your requirements instantly without errors and immediately focus on implementing business logic.
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-card-text" onclick= "window.open('https://github.com/sahariprasad/dbt-jumpstart','dbt Jumpstart repo');" style="cursor: pointer;">
+                            <h3>dbt Jumpstart (Library)</h3>
+                            This project is available as a library in PyPi. Check out the GitHub repo on how to use and also feel free to contribute.
+                        </div>
+                    </div>
+                    <div class="site-card">
+                        <div class="site-card-text" onclick= "window.open('https://github.com/sahariprasad/meal-manager','meal-manager');" style="cursor: pointer;">
+                            <h3>meal-manager</h3>
+                            A very simple meal manager based on user-defined recipes. The main focus of this project is to integrate with Siri through Siri Shortcuts, so that I can always know what I can cook with whatever is available in my grocery list.<br>Although this began as a personal project that runs on a little Raspberry Pi 3b at home, I'm expanding this into a generally-available service soon. This is still in early development, you can visit my repo and have a fork (or spoon :P). 
+                        </div>
+                    </div>
+                    <!-- <div class="site-card">
+                        <div class="site-card-text" onclick= "window.open('https://github.com/sahariprasad/meal-manager','meal-manager');" style="cursor: pointer;">
+                            <h3>This website</h3>
+                            I built this website as a fun project, just to learn how HTML and CSS work. Head to the Github repo.
+                        </div>
+                    </div> -->
+            </div>
+            
+                
             </div>          
         </div>     
     </body>
