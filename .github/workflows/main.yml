@@ -1,6 +1,8 @@
 name: Command via SSH
 
-on: push
+on: 
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -10,7 +12,7 @@ jobs:
       - name: ls -a via OPEN SSH Private Key
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: ls -a
+          command: ./dbt_jumpstart.sh
           host: ${{ secrets.HOST }}
           username: sahariprasad
           passphrase: ${{ secrets.PASSPHRASE }}
