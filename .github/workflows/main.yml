@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via OPEN SSH Private Key
+      - name: Redeploy Website and Jumpstart
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: ./dbt_jumpstart.sh
