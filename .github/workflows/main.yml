@@ -1,8 +1,9 @@
 name: Command via SSH
 
 on: 
-  pull_request:
-    branches: [ "main" ]
+  push:
+    paths-ignore: [".github/workflows"]
+    branches: ["main"]
 
 jobs:
   build:
