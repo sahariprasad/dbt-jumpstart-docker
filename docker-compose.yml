@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  dbt_jumpstart:
+    build: .
+    volumes:
+      - .:/usr/src/app/dbt_jumpstart
+    command: python3 dbt_jumpstart/main.py
+    environment:
+      - discovery.type=single-node
+    networks:
+      dbt_jumpstart_net:
+        ipv4_address: 10.20.0.4
+    ports:
+      - 80:9000
+
+networks:
+  dbt_jumpstart_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.20.0.0/16
+          gateway: 10.20.0.1

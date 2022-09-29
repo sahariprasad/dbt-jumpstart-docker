@@ -1,0 +1,60 @@
+<html>
+   <title>
+      dbt Jumpstart
+   </title>
+   <header">
+      <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
+   </header>
+   <body class="mono-fonts">
+      <div class="header">
+         <div class="title-text">dbt Jumpstart</div>
+      </div>
+      <div class="content">
+            <div id="select-files-content">
+                  <div id="select-files-bar">
+                     <form action = "http://sahariprasad.com/uploader" method = "POST" enctype = "multipart/form-data" class="form-zero-margin">
+                        <!-- <form action = "http://localhost:9000/uploader" method = "POST" enctype = "multipart/form-data"> -->
+                        <label for="columns" class="button_slide slide_right">Select columns.xlsx</label>
+                        <input type="file" id="columns" name="file">
+                        <label for="tables" class="button_slide slide_right">Select tables.xlsx</label>
+                        <input type="file" id="tables" name="file">
+                        <button type="submit" value = "Upload and Convert" class="button_slide slide_right">Upload and Convert</button>
+                     </form>
+                  </div>
+            </div>
+         <hr>
+         <h2>Very short intro</h2>
+         <p>
+            This project helps jump start any dbt project. You can simply collect all the information regarding your tables and their schema and upload here, and the service generates the dbt models for you. The following instructions will guide you through the process.
+         </p>
+         <h2>Preparation</h2>
+         <p>
+            You need to create two .xlsx spreadsheets - one that contains all the table configurations and another that contains the details about all the columns in the tables. The files must be named exactly as shown below:
+            <ul>
+               <li>tables.xlsx</li>
+               <li>columns.xlsx</li>
+            </ul>
+         </p>
+         <h3>tables.xlsx</h3>
+         <p>
+            Create tables.xlsx with the following format. You definitely need to have the column headers as is, but you are free to leave them empty.
+         </p>
+         <img src="{{ url_for('static', filename='images/tables.png') }}">
+         <h3>columns.xlsx</h3>
+         <p>
+            Create a .xlsx spreadsheet in the below format. You definitely need to have the column headers as is, but you are free to leave them empty. <br><br>
+            <b>Note that you need to name the sheets with the exact table names that you used in the tables.xlsx</b>
+         </p>
+         <img src="{{ url_for('static', filename='images/columns.png') }}">
+         <h3>Upload and Convert</h3>
+         <p>
+            Upload your columns.xlsx and tables.xlsx files and hit the "Upload and Convert" button.
+         </p>
+         <hr>
+         <p class="cat-text">"You have saved some time in your life now, do amazing things with it"<br> - Meow, the Thunder Cat.</p>
+         <img src="{{ url_for('static', filename='images/thunder-cat.jpg') }}" class="cat-image">
+      </div>
+      
+      
+   </body>
+</html>
