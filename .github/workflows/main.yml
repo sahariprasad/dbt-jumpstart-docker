@@ -2,8 +2,10 @@ name: Command via SSH
 
 on: 
   push:
-    paths-ignore: [".github/workflows"]
-    branches: ["main"]
+    paths-ignore: 
+      - '.github/**'
+    branches:
+      - main
 
 jobs:
   build:
