@@ -18,7 +18,6 @@ jobs:
           command: ./dbt_jumpstart.sh
           host: ${{ secrets.HOST }}
           username: ubuntu
-#           passphrase: ${{ secrets.PASSPHRASE }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
         env:
           CI: true
