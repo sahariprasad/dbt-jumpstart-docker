@@ -1,4 +1,4 @@
-name: Rebuild websites
+name: Website CD
 
 on: 
   push:
@@ -7,31 +7,31 @@ on:
     branches:
       - main
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: executing remote ssh commands using ssh key
-#         uses: appleboy/ssh-action@master
-#         with:
-#           host: ${{ secrets.HOST }}
-#           username: ${{ secrets.USERNAME }}
-#           key: ${{ secrets.PRIVATE_KEY }}
-#           port: 22
-#           script: ./dbt-jumpstart-rebuild.sh
-
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Redeploy Website and Jumpstart
-        uses: garygrossgarten/github-action-ssh@release
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
         with:
-          command: ./dbt-jumpstart-rebuild.sh
           host: ${{ secrets.HOST }}
-          username: ubuntu
-          privateKey: ${{ secrets.PRIVATE_KEY}}
-        env:
-          CI: true
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
+          script: ./dbt-jumpstart-rebuild.sh
+
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Redeploy Website and Jumpstart
+#         uses: garygrossgarten/github-action-ssh@release
+#         with:
+#           command: ./dbt-jumpstart-rebuild.sh
+#           host: ${{ secrets.HOST }}
+#           username: ubuntu
+#           privateKey: ${{ secrets.PRIVATE_KEY}}
+#         env:
+#           CI: true
