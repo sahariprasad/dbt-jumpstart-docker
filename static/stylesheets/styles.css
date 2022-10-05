@@ -321,3 +321,65 @@ input[type="file"] {
     margin: 0px !important;
 }
 
+/* New start CSS */
+.full-page-splash-1 {
+    height: 100%;
+}
+
+.full-page-splash-text-container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 48px;
+}
+
+.full-page-splash-h1 {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: xx-large;
+    color: black;
+    margin: 0px;
+}
+
+.full-page-splash-h2 {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: large;
+    color: #888;
+    margin: 0px;
+}
+
+.full-page-intro-block {
+    padding: 24px;
+}
+
+.certification-card {
+    background-color: #1bcee2;
+    border-radius: 8px;
+    width: 400px;
+    height: 100px;
+}
+
+.certification-card-image {
+    width: auto;
+    height: auto;
+}
+
+.certification-card-image-container {
+    float: left;
+    display: block;
+    width: 24%;
+}
+
+.certification-card-text-container {
+    float: left;
+    display: block;
+    width: 76%;
+    top: 20%;
+    /* transform: translate(-50%); */
+}
+
+.certification-card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
