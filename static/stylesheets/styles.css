@@ -400,20 +400,13 @@ input[type="file"] {
 }
 
 .certification-card-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: large;
-    text-align: center;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    text-align: left;
 }
 
 .certification-card-container {
-    /* width: 100%; */
-    /* padding: 12px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center; */
-
     width: 100%;
     display: flex;
     flex-direction: row;
