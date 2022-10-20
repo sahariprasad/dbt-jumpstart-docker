@@ -16,8 +16,15 @@ app.config["UPLOAD_FOLDER"] = 'config'
 # Default hello world output
 @app.route('/')
 def hello_world():
-    # return "Hello there!"
-    return render_template('start.html')
+    skillset = {
+        "Data Warehousing": ["Snowflake", "SQL Server", "SAP HANA", "SAP BW"],
+        "Data Engineering": ["Azure Data Factory", "Databricks", "Azure Data Lake", "dbt", "PySpark"],
+        "CI / CD": ["Azure Devops", "GitHub"],
+        "Automation + Programming": ["Python", "C", "Azure Functions"],
+        "Apps + Containers": ["Python", "Flask", "Docker"]
+
+        }
+    return render_template('start.html', skillset=skillset)
 
 
 @app.route('/download', methods=['GET', 'POST'])
