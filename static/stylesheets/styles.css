@@ -166,7 +166,7 @@ input[type="file"] {
     /* font-family: 'Space Mono', monospace; */
     /* font-family: 'JetBrains Mono', monospace; */
     font-family: 'Poppins', sans-serif;
-    padding: 8px;
+    padding: 16px 0px 16px 0px;
     color: black;
     /* width: 70%; */
 }
@@ -306,11 +306,18 @@ input[type="file"] {
     .project-container{
         justify-content: center !important;
     }
+    .container-headers {
+        width: 100%;
+        text-align: center;
+    }
   }
 
 @media only screen and (max-width: 600px) {
     .contact-card {
         width: 100%;
+    }
+    .skills-card-container{
+        justify-content: center !important;
     }
 }
 
@@ -444,8 +451,8 @@ input[type="file"] {
     font-size: large;
     color: #888;
     padding: 8px 16px 8px 0px;
-    width: 160px;
-    text-align: right;
+    width: 140px;
+    text-align: left;
 }
 
 .project-container {
@@ -537,3 +544,11 @@ input[type="file"] {
     color: #4ea74e;
 }
 
+.container-headers {
+    width: 100%;
+    text-align: left;
+    color: #ffa600;
+    font-size: larger;
+    margin: 0px;
+    padding: 0px 0px 8px 0px !important;
+}
