@@ -24,13 +24,25 @@
                 </p>
                 <div class="full-page-intro-block">
                     <div class="intro-text">
-                        I'm a Senior Data Specialist, specializing in data warehousing in Snowflake and data modelling with dbt with seasoned experience in Azure services, particularly in Azure Data Factory, Azure Functions, Azure Databricks, Azure Blob Storage, Azure Logic Apps.<br><br>
-                        SQL Server, HANA and SAP BW are some other warehouses I am experienced in. ETL experience with HVR, Fivetran and BODS.<br><br>
-                        I am hyped about automating things in life leveraging my ability to be the right-amount-of-lazy. Smart homes, python accelerators for every mundane task - like choosing what to eat, setting alarms, controlling temperature and lights, I use Python and shell scripts to control all accelerators and Docker is my new found love. <br><br>
+                        I am a Senior Data Specialist, with expertise in data warehousing, data integration and automation in various platforms. I am hyped about automations and accelerators and I leverage my right amount of laziness to automate things ranging from data model generation and migration to trivial tasks like choosing what to cook, setting alarms, controlling temperature and lights. Python is home and Docker is my new found love. Following is a list of my skills, certifications and projects. <br>
                     </div>
+                    <div class="skills-main-container">
+                        {% for area in skillset %}
+                        <div class="skills-card-container">
+                            <a class="certification-container-headings">{{ area }}</a>
+                            {% for skill in skillset[area] %}
+                            <div class="skill-card">
+                                <a class="skill-card-text">{{ skill }}</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+
                     <div class="certification-card-container">
                         <a class="certification-container-headings">Certifications</a>
-                        <div class="certification-card">
+                        <div class="certification-card" onclick= "window.open('http://credential.net/31951e47-2463-4192-b0fc-9861eae54f51','dbt Certificate');">
                             <div class="certification-card-image-container">
                                 <img src="../static/images/dbt_cert_badge.svg" class="certification-card-image">
                             </div>
@@ -38,7 +50,7 @@
                                 <p class="certification-card-text">Certified dbt Developer</p>
                             </div>
                         </div>
-                        <div class="certification-card">
+                        <div class="certification-card" onclick= "window.open('https://www.credly.com/badges/a37b45b3-73ef-4f04-a74c-c6a42ba97bdb?source=linked_in_profile','Snowflake Certificate');">
                             <div class="certification-card-image-container">
                                 <img src="../static/images/SnowProCore.png" class="certification-card-image">
                             </div>
@@ -49,27 +61,61 @@
                     </div>
                     <div class="project-container">
                         <a class="certification-container-headings">Projects</a>
-                        <div class="project-card">
-                            <div class="site-card-text" onclick= "window.open('http://sahariprasad.com/jumpstart','dbt Jumpstart service');" style="cursor: pointer;">
+                        <div class="project-card" onclick= "window.open('http://sahariprasad.com/jumpstart');" >
+                            <div class="site-card-text">
                                 <h3>dbt Jumpstart (Service)</h3>
                                 This project helps quickly create boilerplate dbt models from your requirements instantly without errors and immediately focus on implementing business logic.
                             </div>
                         </div>
-                        <div class="project-card">
-                            <div class="site-card-text" onclick= "window.open('https://github.com/sahariprasad/dbt-jumpstart','dbt Jumpstart repo');" style="cursor: pointer;">
+                        <div class="project-card" onclick= "window.open('https://github.com/sahariprasad/dbt-jumpstart');" >
+                            <div class="site-card-text">
                                 <h3>dbt Jumpstart (Library)</h3>
                                 This project is available as a library in PyPi. Check out the GitHub repo on how to use and also feel free to contribute.
                             </div>
                         </div>
-                        <div class="project-card">
-                            <div class="site-card-text" onclick= "window.open('https://github.com/sahariprasad/meal-manager','meal-manager');" style="cursor: pointer;">
+                        <div class="project-card"  onclick= "window.open('http://sahariprasad.com:1234/');" >
+                            <div class="site-card-text">
                                 <h3>meal-manager</h3>
-                                A very simple meal manager based on user-defined recipes. The main focus of this project is to integrate with Siri through Siri Shortcuts, so that I can always know what I can cook with whatever is available in my grocery list.<br>Although this began as a personal project that runs on a little Raspberry Pi 3b at home, I'm expanding this into a generally-available service soon. This is still in early development, you can visit my repo and have a fork (or spoon :P). 
+                                <p>A very simple meal manager based on user-defined recipes. Integrates with Siri and Reminders, runs on Flask and Docker.
                             </div>
                         </div>
                     </div>
+                    <div class="project-container">
+                        <a class="certification-container-headings">Contact</a>
+                        <div class="contact-card" onclick="window.open('https://www.linkedin.com/in/sahariprasad/','LinkedIn profile');">
+                            <div class="contact-card-image">
+                                <img src="../static/images/linkedin-logo.png">
+                            </div>
+                            <div class="contact-card-text">
+                                sahariprasad
+                            </div>
+                        </div>
+                        <div class="contact-card" onclick="window.open('https://github.com/sahariprasad','GitHub profile');">
+                            <div class="contact-card-image">
+                                <img src="../static/images/github-logo.png">
+                            </div>
+                            <div class="contact-card-text">
+                                sahariprasad
+                            </div>
+                        </div>
+                        <div class="contact-card" onclick="window.open('mailto:sahariprasad@outlook.com');">
+                            <div class="contact-card-image">
+                                <img src="../static/images/email-icon.png">
+                            </div>
+                            <div class="contact-card-text">
+                                sahariprasad@outlook.com
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
+
+
+
+
+
+            <!-- Old site -->
             <div class="header-black-white" style="display: none;">
                 <div class="title-text-left">Hello there!</div>
             </div>
