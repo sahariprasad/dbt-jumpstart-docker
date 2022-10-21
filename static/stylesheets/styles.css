@@ -361,7 +361,8 @@ input[type="file"] {
 .full-page-splash-h1 {
     font-family: 'JetBrains Mono', sans-serif;
     font-size: xx-large;
-    color: #585858;
+    /* color: #585858; */
+    color: #ffa600;
     margin: 0px;
 }
 
@@ -370,6 +371,7 @@ input[type="file"] {
     font-size: large;
     color: #888;
     margin: 0px;
+    text-align: center;
 }
 
 .full-page-intro-block {
