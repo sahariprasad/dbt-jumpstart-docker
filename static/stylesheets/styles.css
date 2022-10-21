@@ -242,7 +242,7 @@ input[type="file"] {
 
 .contact-card-image {
     display: block;
-    padding: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 8px;
     width: 24px;
     height: 24px;
 }
