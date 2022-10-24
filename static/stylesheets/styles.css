@@ -247,7 +247,12 @@ input[type="file"] {
     height: 24px;
 }
 
-
+/* @media only screen and (max-width: 1000px) {
+    .full-page-intro-block {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+} */
 
 @media only screen and (max-width: 800px) {
     /* For mobile phones: */
@@ -344,6 +349,8 @@ input[type="file"] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* margin-left: 240px;
+    margin-right: 240px; */
 }
 
 .certification-card {
@@ -540,8 +547,9 @@ input[type="file"] {
 .award-year {
     width: 100%;
     text-align: left;
-    color: #ffa600;
-    font-size: larger;
+    color: #8a8a8a;
+    font-size: large;
     margin: 0px;
     padding: 8px 0px 8px 0px !important;
 }
+
