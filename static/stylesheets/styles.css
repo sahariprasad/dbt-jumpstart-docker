@@ -247,7 +247,12 @@ input[type="file"] {
     height: 24px;
 }
 
-
+/* @media only screen and (max-width: 1000px) {
+    .full-page-intro-block {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+} */
 
 @media only screen and (max-width: 800px) {
     /* For mobile phones: */
@@ -344,6 +349,8 @@ input[type="file"] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* margin-left: 240px;
+    margin-right: 240px; */
 }
 
 .certification-card {
@@ -481,6 +488,7 @@ input[type="file"] {
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
+    cursor: default;
 }
 
 .skill-card-text {
@@ -510,3 +518,38 @@ input[type="file"] {
     margin: 0px;
     padding: 0px 0px 8px 0px !important;
 }
+
+.award-card {
+    margin: 4px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 350px;
+    height: 170px;
+    /* box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px; */
+    border: 1px solid #dddddd;
+    /* transition: box-shadow .15s,transform .15s, background-color 0.2s; */
+    cursor: default;
+}
+
+.award-card-title {
+    color: #222222;
+    margin: 0px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.award-card-subtitle {
+    color: #585858;
+    margin: 8px 0px 0px 0px;
+    font-size: medium;
+}
+
+.award-year {
+    width: 100%;
+    text-align: left;
+    color: #8a8a8a;
+    font-size: large;
+    margin: 0px;
+    padding: 8px 0px 8px 0px !important;
+}
+
