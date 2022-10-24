@@ -207,7 +207,7 @@ input[type="file"] {
 .contact-card {
     margin: 4px;
     width: auto;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
     padding-top: 0px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
@@ -233,6 +233,7 @@ input[type="file"] {
 
 .contact-card:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #f7bb4d 0 -4px 0 inset;
+    border: 1px solid #f7bb4d;
     transform: translateY(-4px);
 }
 
@@ -269,7 +270,7 @@ input[type="file"] {
     }
     .certification-container-headings {
         width: 100% !important;
-        text-align: center !important;
+        /* text-align: center !important; */
     }
     .certification-card-container {
         justify-content: center !important;
@@ -288,7 +289,10 @@ input[type="file"] {
         width: 100%;
     }
     .skills-card-container{
-        justify-content: center !important;
+        justify-content: left !important;
+    }
+    .skill-card {
+        min-width: 0px !important;
     }
 }
 
@@ -354,7 +358,7 @@ input[type="file"] {
 }
 
 .certification-card {
-    margin: 4px;
+    margin: 8px 4px 8px 4px;
     background-color: #ffffff;
     border-radius: 4px;
     width: 350px;
@@ -372,6 +376,7 @@ input[type="file"] {
 
 .certification-card:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #f7bb4d 0 -4px 0 inset;
+    border: 1px solid #f7bb4d;
     transform: translateY(-4px);
 }
 
@@ -420,7 +425,7 @@ input[type="file"] {
     font-family: 'JetBrains Mono', sans-serif;
     font-size: large;
     color: #888;
-    padding: 8px 16px 8px 0px;
+    padding: 16px 16px 8px 0px;
     width: 160px;
     text-align: left;
 }
@@ -438,11 +443,12 @@ input[type="file"] {
 }
 
 .project-card {
-    margin: 4px;
+    margin: 8px 4px 8px 4px;
     background-color: #ffffff;
     border-radius: 4px;
     width: 350px;
-    height: 170px;
+    height: fit-content;
+    min-height: 180px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     border: 1px solid #dddddd;
     transition: box-shadow .15s,transform .15s, background-color 0.2s;
@@ -451,6 +457,7 @@ input[type="file"] {
 
 .project-card:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #f7bb4d 0 -4px 0 inset;
+    border: 1px solid #f7bb4d;
     transform: translateY(-4px);
 }
 
@@ -476,11 +483,12 @@ input[type="file"] {
 }
 
 .skill-card {
-    margin: 4px;
+    /* margin: 4px; */
+    margin: 4px 8px 4px 0px;
     background-color: #ffffff;
     border-radius: 4px;
     width: auto;
-    min-width: 120px;
+    min-width: 92px;
     height: 48px;
     border: 1px solid #ddd;
     display: flex;
