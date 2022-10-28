@@ -583,7 +583,7 @@ input[type="file"] {
     background-color: #0d1117;
     border-radius: 4px;
     width: 350px;
-    height: 170px;
+    height: 200px;
     /* box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px; */
     border: 2px solid #444;
     transition: box-shadow .25s,transform .25s, background-color 0.25s, border 0.5s;
