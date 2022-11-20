@@ -17,7 +17,7 @@ app.config["UPLOAD_FOLDER"] = 'config'
 @app.route('/')
 def hello_world():
     skillset = {
-        "Data Warehousing": ["Snowflake", "SQL Server", "SAP HANA", "SAP BW", "GCP BigQuery"],
+        "Data Warehousing": ["Snowflake", "SQL Server", "SAP HANA", "SAP BW", "GCP BigQuery", "Azure Synapse Analytics"],
         "Data Engineering": ["Azure Data Factory", "PySpark", "Databricks", "Azure Data Lake", "dbt", "HVR", "Fivetran"],
         "NoSQL": ["MongoDB"],
         "CI / CD": ["Azure Devops", "GitHub"],
