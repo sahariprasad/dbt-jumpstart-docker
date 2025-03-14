@@ -413,6 +413,13 @@ input[type="file"] {
     padding: 12px;
 }
 
+.certification-card-image-container-narrow {
+    display: block;
+    width: 72px;
+    height: 84px;
+    padding: 12px;
+}
+
 .certification-card-text-container {
     float: inline-end;
     display: block;
